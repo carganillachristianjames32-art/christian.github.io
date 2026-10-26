@@ -64,3 +64,8 @@ button.danger { background: var(--danger); }
 
 .site-footer { text-align: center; padding: 2rem 1rem; color: var(--muted); border-top: 1px solid var(--line); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+/* fixes */
+nav { flex-wrap: wrap; }
+.search input[type="search"] { min-width: 0; }
+code { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: .1rem .35rem; }
+.manage-list form { margin: 0; }

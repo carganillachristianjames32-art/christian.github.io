@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Christian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+<header class="site-header">
+  <a class="brand" href="index.html">Christian</a>
+  <nav>
+    <a href="index.html" aria-current="page">Projects</a>
+    <a href="about.html">About</a>
+    <a href="admin.html">Manage</a>
+  </nav>
+</header>
+<main>
+<section class="hero">
+  <h1>I'm Christian.<br>I build things for the web.</h1>
+  <p>Web Developer working with PHP and MySQL. Browse my work below or search by project name or technology.</p>
+</section>
+
+<section>
+  <form class="search" id="search-form" role="search">
+    <label for="q" class="visually-hidden">Search projects</label>
+    <input id="q" type="search" name="q" placeholder="Search projects, e.g. MySQL">
+    <button type="submit">Search</button>
+    <a class="clear" id="clear" href="index.html" hidden>Clear</a>
+  </form>
+  <p class="result-count" id="result-count" hidden></p>
+  <p class="empty" id="empty" hidden>No projects match that search. Try a different word.</p>
+  <ul class="projects" id="projects"></ul>
+</section>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Christian &middot; <a href="mailto:you@example.com">you@example.com</a></p>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="app.js"></script>
+</body>
+</html>

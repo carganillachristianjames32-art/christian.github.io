@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manage projects | Christian</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+<header class="site-header">
+  <a class="brand" href="index.html">Christian</a>
+  <nav>
+    <a href="index.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="admin.html" aria-current="page">Manage</a>
+  </nav>
+</header>
+<main>
+<section class="narrow">
+  <h1>Manage projects</h1>
+  <p class="notice">Static demo: projects are saved in this browser only (localStorage). Use the PHP version for a real database and login.</p>
+  <p id="msg" role="status" hidden></p>
+
+  <form id="add-form" class="stack">
+    <label>Title <input type="text" name="title" maxlength="120" required></label>
+    <label>Description <textarea name="description" rows="4" required></textarea></label>
+    <label>Technologies <input type="text" name="tech" maxlength="255" placeholder="PHP, MySQL, CSS"></label>
+    <label>Link (optional) <input type="url" name="url" maxlength="255" placeholder="https://"></label>
+    <button type="submit">Add project</button>
+  </form>
+
+  <h2>Your projects</h2>
+  <p class="empty" id="none" hidden>No projects yet. Add your first one above.</p>
+  <ul class="manage-list" id="manage-list"></ul>
+</section>
+</main>
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Christian &middot; <a href="mailto:you@example.com">you@example.com</a></p>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+<script src="app.js"></script>
+</body>
+</html>
